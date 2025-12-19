@@ -88,7 +88,6 @@ async function main() {
         newResults.push(targetResult);
     }
 
-    // ---- 過去結果の読み込み ----
     const distDir = path.resolve("./dist");
     await fs.mkdir(distDir, { recursive: true });
     const outFile = path.join(distDir, "result.json");
@@ -101,16 +100,14 @@ async function main() {
             history = parsed.history;
         }
     } catch (e) {
-        // ファイルが無い場合や読み込みエラーは無視
+        console.warn("Something happen:" + e);
     }
 
-    // 新しい結果を追加して最新50件に制限
     history.push({ generatedAt: new Date().toISOString(), results: newResults });
     if (history.length > 50) {
         history = history.slice(-50);
     }
 
-    // JSON に書き出し
     await fs.writeFile(
         outFile,
         JSON.stringify({ history }, null, 2)
