@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: result
-          path: result-data # 別フォルダに置く
+          path: result # 別フォルダに置く
         continue-on-error: true # 初回などでブランチがない場合に備える
 
       # 2. 監視スクリプト実行 (出力先を result-data/ にする)
