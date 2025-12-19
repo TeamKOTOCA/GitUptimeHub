@@ -1,7 +1,7 @@
 {
   "history": [
     {
-      "generatedAt": "2025-12-19T08:40:30.978Z",
+      "generatedAt": "2025-12-19T08:42:29.595Z",
       "results": [
         {
           "name": "kotoca-web",
@@ -10,27 +10,27 @@
             "head": {
               "ok": false,
               "statusCode": 403,
-              "timeMs": 35
+              "timeMs": 33
             },
             "restime": {
               "ok": true,
               "statusCode": 403,
-              "timeMs": 26
+              "timeMs": 56
             },
             "dns": {
               "ok": true,
               "addresses": [
-                "172.67.169.38",
-                "104.21.95.14"
+                "104.21.95.14",
+                "172.67.169.38"
               ],
-              "timeMs": 1
+              "timeMs": 0
             },
             "tcp": {
               "ok": true,
-              "timeMs": 4
+              "timeMs": 3
             }
           },
-          "time": "2025-12-19T08:40:29.826Z"
+          "time": "2025-12-19T08:42:27.871Z"
         },
         {
           "name": "kotoca-api",
@@ -39,27 +39,114 @@
             "head": {
               "ok": true,
               "statusCode": 200,
-              "timeMs": 289
+              "timeMs": 292
             },
             "restime": {
               "ok": true,
               "statusCode": 200,
-              "timeMs": 290
+              "timeMs": 260
             },
             "dns": {
               "ok": true,
               "addresses": [
-                "216.24.57.7",
-                "216.24.57.251"
+                "216.24.57.251",
+                "216.24.57.7"
               ],
               "timeMs": 0
             },
             "tcp": {
               "ok": true,
-              "timeMs": 20
+              "timeMs": 9
             }
           },
-          "time": "2025-12-19T08:40:29.973Z"
+          "time": "2025-12-19T08:42:28.089Z"
+        },
+        {
+          "name": "sakura-kotoca",
+          "results": {
+            "http": 403,
+            "head": {
+              "ok": false,
+              "statusCode": 403,
+              "timeMs": 30
+            },
+            "restime": {
+              "ok": true,
+              "statusCode": 403,
+              "timeMs": 27
+            },
+            "dns": {
+              "ok": true,
+              "addresses": [
+                "104.21.95.14",
+                "172.67.169.38"
+              ],
+              "timeMs": 1
+            },
+            "tcp": {
+              "ok": true,
+              "timeMs": 3
+            }
+          },
+          "time": "2025-12-19T08:42:29.085Z"
+        },
+        {
+          "name": "sacra-kotoca",
+          "results": {
+            "http": 403,
+            "head": {
+              "ok": false,
+              "statusCode": 403,
+              "timeMs": 49
+            },
+            "restime": {
+              "ok": true,
+              "statusCode": 403,
+              "timeMs": 31
+            },
+            "dns": {
+              "ok": true,
+              "addresses": [
+                "172.67.169.38",
+                "104.21.95.14"
+              ],
+              "timeMs": 0
+            },
+            "tcp": {
+              "ok": true,
+              "timeMs": 3
+            }
+          },
+          "time": "2025-12-19T08:42:29.267Z"
+        },
+        {
+          "name": "status-kotoca",
+          "results": {
+            "http": 403,
+            "head": {
+              "ok": false,
+              "statusCode": 403,
+              "timeMs": 30
+            },
+            "restime": {
+              "ok": true,
+              "statusCode": 403,
+              "timeMs": 30
+            },
+            "dns": {
+              "ok": true,
+              "addresses": [
+                "104.21.95.14",
+                "172.67.169.38"
+              ],
+              "timeMs": 0
+            },
+            "tcp": {
+              "ok": true,
+              "timeMs": 3
+            }
+          },
+          "time": "2025-12-19T08:42:29.421Z"
         }
       ]
     }
