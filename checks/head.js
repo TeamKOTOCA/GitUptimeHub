@@ -10,7 +10,7 @@ export function check_head(url) {
         const lib = url.startsWith("https") ? https : http;
 
         const start = Date.now();
-        const req = lib.request(url, { method: "HEAD" }, (res) => {
+        const req = lib.request(url, { method: "HEAD", headers: { "user-agent": "Mozilla/5.0"} }, (res) => {
         resolve({
             ok: res.statusCode >= 200 && res.statusCode < 400,
             statusCode: res.statusCode,
