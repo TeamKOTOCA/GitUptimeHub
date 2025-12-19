@@ -1,32 +1,74 @@
 {
-"targets": [
-    {
-    "name": "kotoca-web",
-    "url": "https://kotoca.net",
-    "host": "kotoca.net",
-    "checks": {
-        "http": true,
-        "head": true,
-        "restime": true,
-        "dns": true,
-        "tcp": {
-        "port": 443
+    "targets": [
+        {
+        "name": "kotoca-web",
+        "url": "https://kotoca.net",
+        "host": "kotoca.net",
+        "checks": {
+            "http": true,
+            "head": true,
+            "restime": true,
+            "dns": true,
+            "tcp": {
+            "port": 443
+            }
         }
-    }
-    },
-    {
-    "name": "kotoca-api",
-    "url": "https://api.kotoca.net",
-    "host": "api.kotoca.net",
-    "checks": {
-        "http": true,
-        "head": true,
-        "restime": true,
-        "dns": true,
-        "tcp": {
-        "port": 443
+        },
+        {
+        "name": "kotoca-api",
+        "url": "https://api.kotoca.net",
+        "host": "api.kotoca.net",
+        "checks": {
+            "http": true,
+            "head": true,
+            "restime": true,
+            "dns": true,
+            "tcp": {
+            "port": 443
+            }
         }
-    }
-    }
-]
+        },
+        {
+        "name": "sakura-kotoca",
+        "url": "https://sakura.kotoca.net",
+        "host": "sakura.kotoca.net",
+        "checks": {
+            "http": true,
+            "head": true,
+            "restime": true,
+            "dns": true,
+            "tcp": {
+            "port": 443
+            }
+        }
+        },
+        {
+        "name": "sacra-kotoca",
+        "url": "https://sacra.kotoca.net",
+        "host": "sacra.kotoca.net",
+        "checks": {
+            "http": true,
+            "head": true,
+            "restime": true,
+            "dns": true,
+            "tcp": {
+            "port": 443
+            }
+        }
+        },
+        {
+        "name": "status-kotoca",
+        "url": "https://status.kotoca.net",
+        "host": "status.kotoca.net",
+        "checks": {
+            "http": true,
+            "head": true,
+            "restime": true,
+            "dns": true,
+            "tcp": {
+            "port": 443
+            }
+        }
+        }
+    ]
 }
