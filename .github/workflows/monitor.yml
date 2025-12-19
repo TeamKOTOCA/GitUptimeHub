@@ -54,8 +54,11 @@ jobs:
           git fetch origin result || echo "No result branch yet"
           git checkout -B result origin/result || git checkout -b result
 
-          # /result 配下だけ追加
-          git add result
+          # main の /result 配下のファイルをルートにコピー
+          cp -r result/* .
+
+          # result 配下ではなくルート直下を add
+          git add *.json
 
           # commit
           git commit -m "Update monitor results $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
