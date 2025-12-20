@@ -1,44 +1,39 @@
-import { getCloudflareStatus } from "./cloudflare.js";
-import { getAwsStatus } from "./aws.js";
-import { getGcpStatus } from "./gcp.js";
-import { getGithubStatus } from "./github.js";
-import { getRenderStatus } from "./render.js";
-
+const PROVIDERS = {
+    cloudflare: async () => import("./cloudflare.js"),
+    aws: async () => import("./aws.js"),
+    gcp: async () => import("./gcp.js"),
+    github: async () => import("./github.js"),
+    render: async () => import("./render.js"),
+};
 
 export async function getServiceStatus({ provider, service }) {
-
     try {
-        let raw;
-        switch (provider) {
-            case "cloudflare":
-                raw = await getCloudflareStatus(service);
-                break;
-            case "aws":
-                raw = await getAwsStatus(service);
-                break;
-            case "gcp":
-                raw = await getGcpStatus(service);
-                break;
-            case "github":
-                raw = await getGithubStatus(service);
-                break;
-            case "render":
-                raw = await getRenderStatus(service);
-                break;
-            default:
-                throw new Error("Unsupported provider");
+        const loader = PROVIDERS[provider];
+        if (!loader) {
+            throw new Error(`Unsupported provider: ${provider}`);
         }
-                console.log(raw);
+
+        const mod = await loader();
+
+        // 各 provider は getStatus(service) を export する想定
+        if (typeof mod.getStatus !== "function") {
+            throw new Error(`Provider ${provider} has no getStatus()`);
+        }
+
+        const raw = await mod.getStatus(service);
 
         return {
-            api_status: "ok",
+            ok: true,
+            provider,
             status: raw,
         };
 
     } catch (e) {
         return {
-            api_status: "error",
+            ok: false,
+            provider,
             status: "unknown",
+            error: e.message,
         };
     }
 }
