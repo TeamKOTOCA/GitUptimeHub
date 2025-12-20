@@ -123,30 +123,41 @@ async function main() {
 
     const distDir = path.resolve("./result");
     await fs.mkdir(distDir, { recursive: true });
-    const outFile = path.join(distDir, "result.json");
 
-    let history = [];
-    try {
-        const historyRaw = await fs.readFile(outFile, "utf-8");
-        const parsed = JSON.parse(historyRaw);
-        if (Array.isArray(parsed.history)) {
-        history = parsed.history;
+    const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+    const outFile = path.join(distDir, `${timestamp}.json`);
+
+    await fs.writeFile(
+        outFile,
+        JSON.stringify(
+            {
+                generatedAt: new Date().toISOString(),
+                results: newResults,
+            },
+            null,
+            2
+        )
+    );
+
+    console.log(`Result written to ${outFile}`);
+
+    const files = (await fs.readdir(distDir))
+        .filter(f => f.endsWith(".json"))
+        .sort();
+
+    const MAX_FILES = 50;
+    if (files.length > MAX_FILES) {
+        const removeTargets = files.slice(0, files.length - MAX_FILES);
+        for (const file of removeTargets) {
+            await fs.unlink(path.join(distDir, file));
+            console.log(`Removed old result: ${file}`);
         }
-    } catch (e) {
-        console.warn("Failed to read previous result history:", e.message);
     }
-
-    history.push({ generatedAt: new Date().toISOString(), results: newResults });
-    if (history.length > 50) {
-        history = history.slice(-50);
-    }
-
-    await fs.writeFile(outFile, JSON.stringify({ history }, null, 2));
-    console.log(`Results written to ${outFile}`);
 
     if (failed) {
-        console.warn("Some checks failed, but continuing to output JSON.");
+        console.warn("Some checks failed, but JSON was still generated.");
     }
+
 }
 
 main().catch((err) => {
