@@ -124,7 +124,7 @@ async function main() {
     const distDir = path.resolve("./result");
     await fs.mkdir(distDir, { recursive: true });
 
-    const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+    const timestamp = new Date().toISOString();
     const outFile = path.join(distDir, `${timestamp}.json`);
 
     await fs.writeFile(

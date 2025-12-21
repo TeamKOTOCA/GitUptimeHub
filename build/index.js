@@ -18,7 +18,7 @@ async function getLastTime() {
             .map(f => ({ file: f, time: new Date(f.replace('.json','')) }))
             .sort((a,b) => b.time - a.time)[0];
 
-        return latestFile.time.toISOString();
+        return latestFile.time.toString();
     } catch (err) {
         console.error('Failed to get last time:', err);
         return '';
@@ -44,7 +44,7 @@ async function copyAndReplace() {
         const destPath = path.join(DEST_DIR, file);
 
         const stat = await fs.stat(srcPath);
-        if (stat.isFile() && file.endsWith('.html')) {
+        if (stat.isFile() && file.endsWith('.html') || stat.isFile() && file.endsWith('.css')) {
             // HTML ファイルの場合は置換しながらコピー
             let content = await fs.readFile(srcPath, 'utf-8');
 

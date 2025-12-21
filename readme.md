@@ -6,8 +6,6 @@ upptime の仕組みを参考にしつつ、より軽量で柔軟な構成を目
 GitHub Actions 上で定期的に疎通確認を行い、その結果を GitHub 上に記録・可視化します。
 外部の監視サービスに依存せず、GitHub だけで完結することを重視しています。
 
----
-
 ## 特徴
 
 * GitHub Actions のみで動作（常駐サーバー不要）
@@ -17,8 +15,6 @@ GitHub Actions 上で定期的に疎通確認を行い、その結果を GitHub 
 * GitHub 上に履歴を保存・管理
 * upptime より構成が単純で、改造しやすい
 
----
-
 ## 仕組み概要
 
 1. GitHub Actions が cron で起動
@@ -26,7 +22,16 @@ GitHub Actions 上で定期的に疎通確認を行い、その結果を GitHub 
 3. レスポンス結果（成功 / 失敗、ステータスコードなど）やAPIの戻り値を記録
 4. 結果をリポジトリ内に保存（JSON）
 
----
+## 対応してる外部API
+
+- Discord status API
+- OpenAI status API
+- CloudFlare status API
+- GitHub status API
+- Render status API
+- Dropbox status API
+- Notion status API
+- X Developer Platform Status API
 
 ## ディレクトリ構成（例）
 
@@ -54,8 +59,6 @@ resultリポジトリ
 └─ {timestamp}.json
 ```
 
----
-
 ## 設定方法
 
 ### 1. リポジトリを作成
@@ -72,14 +75,10 @@ resultリポジトリ
 Actions が有効になっていれば、特別な操作は不要です。
 必要に応じて `.github/workflows/monitor.yml` の cron を調整してください。
 
----
-
 ## 実行方法
 
 * **自動実行**
-  cron により５分毎に実行されます。
-
----
+  cron により５分毎(に設定してますが多分一時間に一、二回程度)に実行されます。
 
 ## 制限事項
 
@@ -87,7 +86,10 @@ Actions が有効になっていれば、特別な操作は不要です。
 * 高頻度（数分以下）の監視には不向きです
 * コードの安全性は担保できません
 
----
+## ライセンス
+
+このソフトウェアはMITライセンスに基づきます。
+比較的自由なライセンスですが、なるべくページフッターのリンクは剥がさないようお願いします。
 
 ## 補足
 

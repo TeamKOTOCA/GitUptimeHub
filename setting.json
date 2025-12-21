@@ -1,8 +1,8 @@
 {
     "meta": {
         "title": "KOTOCA status",
-        "logo": "https://kotoca.net/KOTOCA(1).webp",
-        "favicon": "https://kotoca.net/KOTOCA(1).webp",
+        "logo": "https://kotoca.net/KOTOCA.webp",
+        "favicon": "https://kotoca.net/KOTOCA.webp",
         "theme": "dark",
         "color": {
             "theme": "#feeeee",
