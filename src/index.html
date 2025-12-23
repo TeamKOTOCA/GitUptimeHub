@@ -54,6 +54,11 @@
         window.addEventListener('scroll', () =>
             document.body.classList.toggle('scrolled', scrollY > 80)
         );
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.se_div').forEach(seDiv => {
+                seDiv.scrollLeft = seDiv.scrollWidth;
+            });
+        });
     </script>
 </body>
 </html>
