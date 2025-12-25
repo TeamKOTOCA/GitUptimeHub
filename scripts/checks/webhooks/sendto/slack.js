@@ -1,5 +1,3 @@
-import fetch from "node-fetch";
-
 export async function sendSlack(events, webhookUrl) {
     if (!events.length || !webhookUrl) return;
 
