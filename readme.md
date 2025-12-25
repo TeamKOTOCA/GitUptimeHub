@@ -1,3 +1,5 @@
+## [Step2はこちら](https://gituptimehub.kotoca.net/)
+
 # Gituptimehub
 <p align="center">
   <img src="https://img.shields.io/github/license/TeamKOTOCA/GitUptimeHub?style=for-the-badge">  <img src="https://img.shields.io/github/stars/TeamKOTOCA/GitUptimeHub?style=for-the-badge">  <img src="https://img.shields.io/github/forks/TeamKOTOCA/GitUptimeHub?style=for-the-badge">  <img src="https://img.shields.io/github/issues/TeamKOTOCA/GitUptimeHub?style=for-the-badge"></p>
