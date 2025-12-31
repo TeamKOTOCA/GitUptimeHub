@@ -1,0 +1,179 @@
+{
+  "generatedAt": "2025-12-31T06:41:47.807Z",
+  "results": [
+    {
+      "label": "kotoca公式サイト",
+      "category": "kotoca_services",
+      "type": "self",
+      "results": {
+        "head": {
+          "ok": true,
+          "statusCode": 200,
+          "timeMs": 208
+        },
+        "restime": {
+          "ok": true,
+          "statusCode": 200,
+          "timeMs": 7
+        },
+        "dns": {
+          "ok": true,
+          "addresses": [
+            "185.199.109.153",
+            "185.199.111.153",
+            "185.199.110.153",
+            "185.199.108.153"
+          ],
+          "timeMs": 0
+        },
+        "tcp": {
+          "ok": true,
+          "timeMs": 85
+        }
+      },
+      "time": "2025-12-31T06:41:45.261Z"
+    },
+    {
+      "label": "kotocaAPI",
+      "category": "kotoca_services",
+      "type": "self",
+      "results": {
+        "head": {
+          "ok": true,
+          "statusCode": 200,
+          "timeMs": 371
+        },
+        "restime": {
+          "ok": true,
+          "statusCode": 200,
+          "timeMs": 299
+        },
+        "dns": {
+          "ok": true,
+          "addresses": [
+            "216.24.57.7",
+            "216.24.57.251"
+          ],
+          "timeMs": 0
+        },
+        "tcp": {
+          "ok": true,
+          "timeMs": 5
+        }
+      },
+      "time": "2025-12-31T06:41:45.938Z"
+    },
+    {
+      "label": "GitHub Actions",
+      "category": "core",
+      "type": "provider",
+      "results": {
+        "ok": true,
+        "provider": "github",
+        "status": {
+          "name": "Actions",
+          "normalizedStatus": "operational"
+        }
+      },
+      "time": "2025-12-31T06:41:46.234Z"
+    },
+    {
+      "label": "Render Dashboard",
+      "category": "core",
+      "type": "provider",
+      "results": {
+        "ok": true,
+        "provider": "render",
+        "status": {
+          "name": "Render Dashboard",
+          "normalizedStatus": "operational"
+        }
+      },
+      "time": "2025-12-31T06:41:46.479Z"
+    },
+    {
+      "label": "Cloudflare Workers",
+      "category": "core",
+      "type": "provider",
+      "results": {
+        "ok": true,
+        "provider": "cloudflare",
+        "status": {
+          "name": "Workers",
+          "normalizedStatus": "operational"
+        }
+      },
+      "time": "2025-12-31T06:41:46.686Z"
+    },
+    {
+      "label": "Dropbox",
+      "category": "core",
+      "type": "provider",
+      "results": {
+        "ok": true,
+        "provider": "dropbox",
+        "status": {
+          "name": "Website",
+          "normalizedStatus": "operational"
+        }
+      },
+      "time": "2025-12-31T06:41:46.852Z"
+    },
+    {
+      "label": "Notion",
+      "category": "core",
+      "type": "provider",
+      "results": {
+        "ok": true,
+        "provider": "notion",
+        "status": {
+          "name": "Notion API",
+          "normalizedStatus": "operational"
+        }
+      },
+      "time": "2025-12-31T06:41:47.295Z"
+    },
+    {
+      "label": "OpenAI",
+      "category": "core",
+      "type": "provider",
+      "results": {
+        "ok": true,
+        "provider": "openai",
+        "status": {
+          "name": "Compliance API",
+          "normalizedStatus": "operational"
+        }
+      },
+      "time": "2025-12-31T06:41:47.454Z"
+    },
+    {
+      "label": "discord",
+      "category": "core",
+      "type": "provider",
+      "results": {
+        "ok": true,
+        "provider": "discord",
+        "status": {
+          "name": "API",
+          "normalizedStatus": "operational"
+        }
+      },
+      "time": "2025-12-31T06:41:47.678Z"
+    },
+    {
+      "label": "x",
+      "category": "core",
+      "type": "provider",
+      "results": {
+        "ok": true,
+        "provider": "x",
+        "status": {
+          "name": "GNIP Enterprise API",
+          "normalizedStatus": "operational"
+        }
+      },
+      "time": "2025-12-31T06:41:47.806Z"
+    }
+  ]
+}
